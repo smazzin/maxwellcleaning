@@ -278,23 +278,23 @@
 		"oAP": "\/layouts\/sitemap.xml",
 		"oF": 0
 		},
-	"\/static\/css\/main.css": {
+	"\/static\/css\/main.min.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/static\/css\/main-min.css",
+		"oAP": "\/static\/css\/main.min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/static\/css\/normalize.css": {
+	"\/static\/css\/normalize.min.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/static\/css\/normalize-min.css",
+		"oAP": "\/static\/css\/normalize.min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -660,9 +660,9 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/static\/css\/main.css",
+		"oAP": "\/static\/css\/main.min.css",
 		"oF": 2,
-		"oS": 0,
+		"oS": 3,
 		"uL": 1
 		},
 	"\/static\/sass\/nav-styles.scss": {
@@ -676,6 +676,19 @@
 		"oAP": "\/static\/sass\/nav-styles.css",
 		"oF": 0,
 		"oS": 0,
+		"uL": 1
+		},
+	"\/static\/sass\/normalize.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/static\/css\/normalize.min.css",
+		"oF": 2,
+		"oS": 3,
 		"uL": 1
 		},
 	"\/static\/sass\/responsive-nav.scss": {
