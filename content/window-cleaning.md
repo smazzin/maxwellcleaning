@@ -3,7 +3,7 @@ title: "Window cleaning Klamath Falls, OR | Maxwell Cleaning Services"
 description: "Window cleaning in Klamath falls, OR. We do both residential and commercial window washing. Give us a call to get those windows sparkling clean!"
 pagetitle: "Professional Window Cleaning Klamath Falls"
 layout: single
-heroText: "Servicing the Klamath basin and surrounding areas. <br> Call us today for a free quote!"
+heroText: "Servicing the Klamath basin and surrounding areas. <br> Call us today for a FREE quote!"
 image: "/img/window-cleaning-lg.jpg"
 ---
 
