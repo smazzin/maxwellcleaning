@@ -1,0 +1,363 @@
+
+//set default font size
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+html, body {
+  height:100%;
+}
+
+h1 {
+    font-size: 41px;
+    font-size: 4.1rem;
+}
+
+h2 {
+    font-size: 21px;
+    font-size: 2.1rem;
+}
+
+span {
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+//define colors
+$havelockblue: #253e60;
+$white: #ffffff;
+$light-gray:#f2f4f4;
+$tundora:#444444;
+@font-face {
+    font-family: 'codropsicons';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/codropsicons/codropsicons.eot');
+    src: url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'), url('../fonts/codropsicons/codropsicons.woff') format('woff'), url('../fonts/codropsicons/codropsicons.ttf') format('truetype'), url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+body {
+    font-family: 'Avenir Next', Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+    color: $tundora;
+    background: $white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: $havelockblue;
+    outline: none;
+}
+
+// a:hover,
+// a:focus {
+//     color: #f48b95;
+// }
+//responsive images
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+// .layout {
+//   display: flex;
+//   min-height: 100vh;
+//   flex-direction: column;
+// }
+
+// .main-content {
+//   flex: 1;
+// }
+
+.wrap {
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+
+//flex box cards
+// Put behind .flexbox for Feature detection with Modernizr
+.flexbox .flex-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.flexbox .flex-card-listitem {
+    display: flex;
+}
+
+// Code to adjust the layout to 2 cards per row
+@media all and (min-width:40em) {
+    /* Float layout */
+    .flex-card-list li {
+        width: 50%;
+    }
+    .no-flexbox .flex-card-list li {
+        float: left;
+    }
+}
+
+// Code to adjust the layout to 3 cards per row 
+@media all and (min-width:40em) and (max-width:60em) {
+    // Clears the row for 2 item per row layout
+    .no-flexbox .flex-card-list li:nth-child(2n+1) {
+        clear: both;
+    }
+}
+
+@media all and (min-width:60em) {
+    // common to flex and non-flex 
+    .flex-card-list li {
+        width: 33.33%;
+    }
+    // Float specific: Clear after every third item
+    .no-flexbox .flex-card-list li:nth-child(3n+1) {
+        clear: both;
+    }
+}
+
+.flex-card {
+    background: $white;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    padding: 1em;
+    margin: 0.5em;
+}
+
+.flexbox .flex-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexbox .flex-card-content {
+    display: flex;
+    flex: 1 0 auto;
+    // We have to add a basis for IE10/11 
+    flex-direction: column;
+}
+
+.flexbox .flex-card-content p {
+    flex: 1 0 auto;
+    // We have to add a basis for IE10/11 
+}
+
+.flex-card-button {
+    color: $tundora;
+    text-decoration: none;
+    outline: none;
+}
+
+//Hero image
+
+#carpet-hero {
+    background-image: url(/img/carpet-cleaning-lg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    padding-bottom: 20%;
+    /* 2:1 */
+}
+
+.content {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    right: 30px;
+}
+
+.hero {
+    background-color: $light-gray;
+    color: $havelockblue;
+    padding: 1em 0;
+    margin-bottom: 1em;
+}
+
+//top-nav
+.top-nav{
+  background-color:$havelockblue;
+}
+
+//footer
+.footer {
+  background-color:$light-gray;
+  margin-top:1em;
+}
+//copyright
+.copyright {
+  padding:0.5em;
+}
+
+//buttons
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.42857;
+    border-radius: 5px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btn:focus,
+.btn.focus,
+.btn:active:focus,
+.btn:active.focus,
+.btn.active:focus,
+.btn.active.focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.btn:hover,
+.btn:focus,
+.btn.focus {
+    color: #333;
+    text-decoration: none;
+}
+
+.btn:active,
+.btn.active {
+    outline: 0;
+    background-image: none;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+    cursor: not-allowed;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+// .btn {
+//   border-radius: 5px;
+//   margin: 21px 0 0 0;
+//   font-weight: 700; }
+.btn.btn-lg,
+.btn-group-lg > .btn {
+    padding: 10px 40px;
+}
+
+.btn.btn-white {
+    background: $white;
+    color: $tundora;
+    border-bottom: 4px solid darken($white, 20%);
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+
+.btn.btn-primary {
+    background: $havelockblue;
+    color: $white;
+    border-bottom: 4px solid darken($havelockblue, 20%);
+}
+
+.btn.btn-success {
+    background: #8CC152;
+    color: $white;
+    border-bottom: 4px solid #659234;
+}
+
+.btn.btn-info {
+    background: #37BC9B;
+    color: $white;
+    border-bottom: 4px solid #26816a;
+}
+
+.btn.btn-warning {
+    background: #F6BB42;
+    color: $white;
+    border-bottom: 4px solid #e19b0b;
+}
+
+.btn.btn-danger {
+    background: #DA4453;
+    color: $white;
+    border-bottom: 4px solid #af2331;
+}
+
+.btn.btn-hero,
+.btn.btn-hero:hover,
+.btn.btn-hero:focus {
+    color: #f5f5f5;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    outline: none;
+    margin: 20px auto;
+}
+
+//list styles
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.services li {
+  margin:1.333333em 0;
+}
+
+.top-header {
+    background-color: $havelockblue;
+    color: $white;
+    padding: 1em 0;
+}
