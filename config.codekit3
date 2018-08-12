@@ -7,7 +7,7 @@
 		"uuidString": "EE54D292-7EFE-4E19-B813-B8FBE67CA74E"
 		}
 	],
-"creatorBuild": "26268",
+"creatorBuild": "26680",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -301,6 +301,7 @@
 	"\/static\/img\/256.jpg": {
 		"ft": 16384,
 		"iS": 0,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/static\/img\/256.jpg",
 		"oF": 0,
@@ -311,6 +312,7 @@
 	"\/static\/img\/backup\/carpet-cleaning.jpg": {
 		"ft": 16384,
 		"iS": 25376,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/static\/img\/backup\/carpet-cleaning.jpg",
 		"oF": 0,
@@ -321,6 +323,7 @@
 	"\/static\/img\/backup\/commercial.jpg": {
 		"ft": 16384,
 		"iS": 64905,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/static\/img\/backup\/commercial.jpg",
 		"oF": 0,
@@ -331,6 +334,7 @@
 	"\/static\/img\/backup\/window-cleaning.jpg": {
 		"ft": 16384,
 		"iS": 61328,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/static\/img\/backup\/window-cleaning.jpg",
 		"oF": 0,
@@ -341,6 +345,7 @@
 	"\/static\/img\/carpet-cleaning-lg.jpg": {
 		"ft": 16384,
 		"iS": 0,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/static\/img\/carpet-cleaning-lg.jpg",
 		"oF": 0,
@@ -351,6 +356,7 @@
 	"\/static\/img\/carpet-cleaning.jpg": {
 		"ft": 16384,
 		"iS": 0,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/static\/img\/carpet-cleaning.jpg",
 		"oF": 0,
@@ -361,6 +367,7 @@
 	"\/static\/img\/commercial.jpg": {
 		"ft": 16384,
 		"iS": 0,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/static\/img\/commercial.jpg",
 		"oF": 0,
@@ -371,6 +378,7 @@
 	"\/static\/img\/drop-of-water.jpg": {
 		"ft": 16384,
 		"iS": 0,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/static\/img\/drop-of-water.jpg",
 		"oF": 0,
@@ -381,6 +389,7 @@
 	"\/static\/img\/janitorial-lg.jpg": {
 		"ft": 16384,
 		"iS": 0,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/static\/img\/janitorial-lg.jpg",
 		"oF": 0,
@@ -402,6 +411,7 @@
 	"\/static\/img\/logo.jpg": {
 		"ft": 16384,
 		"iS": 0,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/static\/img\/logo.jpg",
 		"oF": 0,
@@ -412,6 +422,7 @@
 	"\/static\/img\/maxwell-cleaning-services.jpg": {
 		"ft": 16384,
 		"iS": 0,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/static\/img\/maxwell-cleaning-services.jpg",
 		"oF": 0,
@@ -422,6 +433,7 @@
 	"\/static\/img\/rug-cleaning.jpg": {
 		"ft": 16384,
 		"iS": 0,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/static\/img\/rug-cleaning.jpg",
 		"oF": 0,
@@ -432,6 +444,7 @@
 	"\/static\/img\/window-cleaning-lg.jpg": {
 		"ft": 16384,
 		"iS": 0,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/static\/img\/window-cleaning-lg.jpg",
 		"oF": 0,
@@ -442,6 +455,7 @@
 	"\/static\/img\/window-cleaning.jpg": {
 		"ft": 16384,
 		"iS": 0,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/static\/img\/window-cleaning.jpg",
 		"oF": 0,
@@ -726,7 +740,8 @@
 	"creationDate": 536891241,
 	"displayValue": "maxwellcleaning-hugo",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-ceiling"
+	"iconImageName": "meme-ceiling",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2529,6 +2544,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {
