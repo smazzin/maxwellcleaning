@@ -35,11 +35,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "serviceType": "Professional carpet cleaning, window cleaning, and janitorial",
     "name": "Maxwell Cleaning Services",
     "telephone": "541-281-1079",
-    "openingHours": "Mo,Tu,We,Th,Fr 08:00-17:00",
+    "openingHours": "Mo-Su 08:00-23:59",
+    "logo": "https://maxwellcleaningservice.com/img/logo-sm.jpg",
     "image": "https://maxwellcleaningservice.com/img/logo-sm.jpg",
+    "url": "https://maxwellcleaningservice.com/",
     "priceRange" : "$$$",
-    //"areaServed":"Klamath Falls, Oregon",
-    "areaServed": ["Klamath Falls"],
+    "areaServed": ["Klamath Falls, OR"],
     "address" : {
       "@type" : "PostalAddress",
       "streetAddress" : "",
@@ -58,21 +59,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Window washing"
+              "name": "Window washing",
+              "url": "https://maxwellcleaningservice.com/carpet-cleaning/"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Carpet cleaning"
+              "name": "Carpet cleaning",
+              "url": "https://maxwellcleaningservice.com/window-cleaning/"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Janitorial"
+              "name": "Janitorial",
+              "url": "https://maxwellcleaningservice.com/janitorial/"
             }
           }
         ]
@@ -81,6 +85,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 }
 </script>
+
+{{- $url := replace .Permalink ( printf "%s" ( "/" | absLangURL ) ) "" -}} 
+{{- $url := replace .Permalink ( printf "%s" ( "/" | absLangURL ) ) "" -}} 
+
+{{- $.Scratch.Add "path" ( "/" | absLangURL ) -}} 
+{{- $.Scratch.Add "breadcrumb" (slice (dict "url" ( "/" | absLangURL ) "name" "home" "position" 1 )) -}} 
+{{- range $index, $element := split $url "/" -}} 
+  {{- $.Scratch.Add "path" $element -}} 
+  {{- $.Scratch.Add "path" "/" -}} 
+    {{- if ne $element "" -}} {{- $.Scratch.Add "breadcrumb" (slice (dict "url" ($.Scratch.Get "path") "name" . "position" (add $index 2))) -}} 
+  {{- end -}} 
+{{- end -}}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+  {{ range $.Scratch.Get "breadcrumb" }}
+    {{ if ne .position 1 }},
+  {{ end }}
+  {
+        "@type": "ListItem",
+        "position": {{ .position }},
+        "item": {
+          "@id": "{{ .url }}",
+          "name": "{{ .name }}"
+        }
+    }{{ end }}]
+}
+</script>
+
 </head>
 <body class="layout">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTDDNPZ"
