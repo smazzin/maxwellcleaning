@@ -38,6 +38,7 @@
                       {{ .prefix }} &copy; {{ with ( $.Scratch.Get "copyrightStartYear" ) }}{{ . }}-{{ end }}{{ now.Year }} {{ or .holder $.Site.Title }} {{ .suffix }}
                     {{- end -}}
                   {{ end }}
+                  <span>Site by <a href="https://www.digitalcloudnw.com/">Digital Cloud</a></span>
                 </div>
             </div>
         </div>
