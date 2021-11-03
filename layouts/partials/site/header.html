@@ -1,0 +1,17 @@
+<div class="top-nav">
+  <div class="container-fluid">
+    <div class="row center-xs middle-xs" id="Sebastian">
+      <span class="link-copy"></span>
+      <a href="{{ .Site.BaseURL }}">
+        <img width="300" height="105" class="logo" src="{{ .Site.BaseURL }}/img/maxwell-janitorial-logo-new.jpg" alt="Maxwell Cleaning Services, Klamath Falls, OR">
+      </a>
+      <nav class="menu menu--sebastian nav-collapse">
+        <ul id="nav" class="menu__list">
+          {{ range .Site.Menus.main }}
+          <li class="menu__item"><a class="menu__link" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

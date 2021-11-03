@@ -1,0 +1,19 @@
+{
+	"name": "maxwellcleaning",
+	"private": true,
+	"scripts": {
+		"start": "hugo server --disableFastRender",
+		"build": "hugo && npm run build:functions",
+		"build:functions": "netlify-lambda build assets/lambda",
+		"server": "hugo server --disableKinds=taxonomy,taxonomyTerm"
+	},
+	"dependencies": {
+		"autoprefixer": "^10.3.1",
+		"netlify-lambda": "^2.0.11",
+		"postcss": "^8.3.6"
+	},
+	"devDependencies": {
+		"hugo-extended": "^0.85.0",
+		"postcss-cli": "^8.3.1"
+	}
+}

@@ -20,7 +20,7 @@ description = "Maxwell Cleaning Service"
 title404 = "Page Not Found"
 
 [params]
-description = "Maxwell Cleaning Services provides superior cleaning solutions including carpet cleaning, window cleaning, and janitorial services. Servicing Klamath Falls and surrounding areas."
+description = "Maxwell Cleaning Services provides superior cleaning solutions including carpet cleaning, window cleaning, and janitorial services. Servicing Klamath Falls."
 pagetitle = "Maxwell Cleaning Services"
 noindex_kinds = [
   "taxonomy",
@@ -73,11 +73,17 @@ identifier = "Janitorial"
 url = "janitorial"
 
 [[menu.main]]
-name = "Contact"
+name = "About"
 weight = 4
+identifier = "About"
+url = "about"
+
+[[menu.main]]
+name = "Contact"
+weight = 5
 identifier = "Contact"
 class = "contact"
-url = "#"
+url = "contact"
 
 [blackfriday]
 hrefTargetBlank = true

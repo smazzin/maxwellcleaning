@@ -1,0 +1,46 @@
+{{ define "main" }}
+
+<div class="hero">
+  <div class="row center-xs">
+    <div class="col-xs">
+            <h1 class="hero-headline">{{ .Params.PageTitle }}</h1>
+        </div>
+  </div>
+    <div class="wrap container-fluid">
+        <div class="row center-xs">
+            <div class="col-md-10 col-md-offset-2">
+                <div class="row">
+                    <div class="col-md-8 col-xs-12">
+                        <p class="hero-copy-sm">{{ with .Params.heroText }}{{ . | safeHTML }}{{ end }}</p>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <p><a class="btn btn-lg btn-white" href="tel:541-281-1079">541-281-1079</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrap container-fluid">
+    <div class="row center-sm middle-sm">
+        <div class="col-sm-7">
+            {{ .Content }}
+            <div class="contact-wrapper">
+                <form id="contact-form" name="contact" data-netlify="true" netlify-honeypot="bot-field" target="_self">
+                    <input type="text" name="Name" placeholder="Name" onblur="this.setAttribute('value', this.value);" value=""
+                        required>
+                    <input placeholder="Email address" type="email" name="_replyto" onblur="this.setAttribute('value', this.value);"
+                        value="" required>
+                    <textarea name="Message" cols="30" rows="6" placeholder="Message" required></textarea>
+                    <input type="hidden" name="bot-field" />
+                    <input type="hidden" name="_subject" value="Contact from maxwellcleaningservice.com">
+                    <div class="mt-50">
+                        <button class="btn btn-lg btn-primary" type="submit" value="Send Message">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

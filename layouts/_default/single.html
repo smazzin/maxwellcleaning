@@ -1,5 +1,4 @@
-{{ partial "header" . }}
-
+{{ define "main" }}
 <div class="hero">
   <div class="row center-xs">
     <div class="col-xs">
@@ -24,13 +23,14 @@
 
 <div class="wrap container-fluid">
     <div class="row start-sm">
+        {{ if ( isset .Params "image" )}}
         <div class="col-sm-12">
             <img src="{{ .Params.image }}" alt="{{ .Title }}">
         </div>
+        {{ end }}
         <div class="col-sm-12">
-            {{ .Content }}
+            {{ .Content | safeHTML }}
         </div>
     </div>
 </div>
-
-{{ partial "footer.html" . }}
+{{ end }}

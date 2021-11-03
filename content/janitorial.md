@@ -3,7 +3,7 @@ title: "Janitorial cleaning Klamath Falls | Maxwell Cleaning Services"
 description: "Janitorial cleaning services in klamath falls, OR."
 pagetitle: "Professional Janitorial Services in Klamath Falls"
 layout: single
-heroText: "Serving the Klamath basin and surrounding areas. <br> Call us today for a free quote!"
+heroText: "Serving the Klamath basin. <br> Call us today for a free quote!"
 h2Text: "Janitorial for Offices & Small Businesses"
 image: "/img/janitorial-lg.jpg"
 ---

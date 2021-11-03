@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ .Site.LanguageCode | default " en-us" }}">
+	<head>
+		<script>(function (w, d, s, l, i) {
+				w[l] = w[l] || []; w[l].push({
+					'gtm.start':
+						new Date().getTime(), event: 'gtm.js'
+				}); var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+						'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-MTDDNPZ');</script>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- noindex meta -->
+		{{ $default_noindex_kinds := slice "section" "taxonomy" "taxonomyTerm" }}
+		{{ $noindex_kinds := .Site.Params.noindex_kinds | default $default_noindex_kinds }}
+		{{ $is_noindex_true := and (isset .Params "noindex") .Params.noindex }}
+		{{ if or (in $noindex_kinds .Kind) ($is_noindex_true) }}
+		<meta name="robots" content="noindex">
+		{{ end }}
+		<title>{{ .Title }}</title>
+		<meta name="description" content="{{ .Description }}">
+		<meta property="og:description" content="{{ .Description }}">
+		{{ with .Site.Params.author }}
+		<meta name="author" content="{{ . }}">{{ end }}
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/normalize.min.css">
+		<!--
+		{{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
+		-->
+		<link rel="canonical" href="{{ .URL | relURL }}"> {{ if (isset .Params "prev") }}
+		<link rel="prev" href="{{ .Params.prev }}"> {{ end }} {{ if (isset .Params "next") }}
+		<link rel="next" href="{{ .Params.next }}"> {{ end }}
+		
+		{{ block "site/styles" . }}{{ partial "site/styles.html" . }}{{ end }}
+
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org/",
+	"@type": ["LocalBusiness","Service"],
+	"serviceType": "Professional carpet cleaning, window cleaning, and janitorial",
+		"name": "Maxwell Cleaning Services",
+		"telephone": "541-281-1079",
+		"openingHours": "Mo-Su 08:00-23:59",
+		"logo": "https://maxwellcleaningservice.com/img/logo-sm.jpg",
+		"image": "https://maxwellcleaningservice.com/img/logo-sm.jpg",
+		"url": "https://maxwellcleaningservice.com/",
+		"priceRange" : "$$$",
+		"areaServed": ["Klamath Falls, OR"],
+		"address" : {
+			"@type" : "PostalAddress",
+			"streetAddress" : "",
+			"addressLocality" : "Klamath Falls",
+			"addressRegion" : "OR",
+			"postalCode" : ""
+		},
+	"hasOfferCatalog": {
+		"@type": "OfferCatalog",
+		"name": "Cleaning services",
+		"itemListElement": [
+			{
+				"@type": "OfferCatalog",
+				"itemListElement": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Carpet cleaning",
+							"url": "https://maxwellcleaningservice.com/carpet-cleaning/"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Window cleaning",
+							"url": "https://maxwellcleaningservice.com/window-cleaning/"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Janitorial",
+							"url": "https://maxwellcleaningservice.com/janitorial/"
+						}
+					}
+				]
+			}
+		]
+	}
+}
+</script>
+
+		{{- $url := replace .Permalink ( printf "%s" ( "/" | absLangURL ) ) "" -}}
+		{{- $url := replace .Permalink ( printf "%s" ( "/" | absLangURL ) ) "" -}}
+		
+		{{- $.Scratch.Add "path" ( "/" | absLangURL ) -}}
+		{{- $.Scratch.Add "breadcrumb" (slice (dict "url" ( "/" | absLangURL ) "name" "home" "position" 1 )) -}}
+		{{- range $index, $element := split $url "/" -}}
+		{{- $.Scratch.Add "path" $element -}}
+		{{- $.Scratch.Add "path" "/" -}}
+		{{- if ne $element "" -}}
+		{{- $.Scratch.Add "breadcrumb" (slice (dict "url" ($.Scratch.Get "path") "name" . "position" (add $index 2))) -}}
+		{{- end -}}
+		{{- end -}}
+		
+		<script type="application/ld+json">
+		    {
+		    "@context": "http://schema.org",
+		    "@type": "BreadcrumbList",
+		    "itemListElement": [
+		    {{ range $.Scratch.Get "breadcrumb" }}
+		        {{ if ne .position 1 }},
+		    {{ end }}
+		    {
+		            "@type": "ListItem",
+		            "position": {{ .position }},
+		            "item": {
+		            "@id": "{{ .url }}",
+		            "name": "{{ .name }}"
+		            }
+		        }{{ end }}]
+		    }
+		</script>
+
+	</head>
+
+	<body class="layout">
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTDDNPZ" height="0" width="0"
+				style="display:none;visibility:hidden"></iframe></noscript>
+		<div class="page js-page">
+			{{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
+			{{ block "main" . }}{{ end }}
+			{{ block "footer" . }}{{ partial "site/footer.html" . }}{{ end }}
+		</div>
+</body>
+</html>
