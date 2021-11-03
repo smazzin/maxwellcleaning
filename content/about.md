@@ -2,7 +2,7 @@
 title: "About Maxwell Cleaning Service | Klamath Falls, OR"
 description: "Looking for the best professional carpet cleaning in Klamath falls, OR? Give us a call today for a free quote."
 pagetitle: "About Maxwell Cleaning Service"
-layout: single
+layout: about
 heroText: "We service the Klamath basin. <br> Call us today for a free quote!"
 ---
 

@@ -362,7 +362,7 @@ fieldset[disabled] .btn {
     padding: 1em 0;
 }
 
-.col-sm-12 ul {
+.about ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 60px;
@@ -372,7 +372,7 @@ fieldset[disabled] .btn {
   align-items: center;
 }
 
-.col-sm-12 ul li {
+.about ul li {
   background-color: white;
   border-radius: 0.25rem;
   display: flex;
